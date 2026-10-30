@@ -1,0 +1,1 @@
+Implementazione della Trasformata di Burrows-Wheeler (BWT) con comunicazione Client-Server TCP in Python
