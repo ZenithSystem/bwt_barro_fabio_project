@@ -18,7 +18,7 @@ def encode_bwt(testo):
 
     for i in range(n):
         for j in range(i + 1, n):
-
+            # Se l'elemento corrente è alfabeticamente maggiore di quello successivo, effettua lo scambio
             if rotazioni[i] > rotazioni[j]:
 
                 # scambia i valori in maniera decresciente
@@ -26,7 +26,9 @@ def encode_bwt(testo):
                 rotazioni[i] = rotazioni[j]
                 rotazioni[j] = temp
     
-    
+
+
+    # Costruzione della stringa BWT estraendo l'ultimo carattere di ogni rotazione ordinata
     bwt = ""
     for r in rotazioni:
         bwt += r[-1]
