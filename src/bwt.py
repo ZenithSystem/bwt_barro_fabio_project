@@ -19,7 +19,7 @@ def encode_bwt(testo):
 
     for i in range(n):
         for j in range(i + 1, n):
-            if rotazioni[i] < rotazioni[j]:
+            if rotazioni[i] > rotazioni[j]:
 
                 #scambia i valori in maniera decresciente
                 temp = rotazioni[i]
