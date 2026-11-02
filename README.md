@@ -12,3 +12,5 @@ Ottenute le permutazioni salviamo le stringhe all'interno di una matrice in ordi
 La trasformata finale consiste nel leggere l'ultina colonna della matrice ordinata dall'alto verso il basso 
 e la stringa ottenuta sarà la nostra finale trasformata BWT.
 
+L'obbiettivo del progietto oltre a scrivere la trasformata di Burrows-Wheeler è quello utilizzare il socket in python per lacomunicazione client - server con i loro relaitvi script client.py e server.py
+
