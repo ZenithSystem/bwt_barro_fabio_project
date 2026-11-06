@@ -23,3 +23,8 @@ print("Socket di connesione: ", conn.getsockname())
 dati = server.recv(1024) #numero massimo di byte per chiamata per evetare che si sovraccarichi
 print("Dati ricevuti dal client", dati.decode())
 conn.sendall(dati)
+
+conn.close()
+server.close()
+
+
