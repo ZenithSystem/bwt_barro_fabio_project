@@ -1,15 +1,19 @@
-
-
 import socket as sck
 
 IP = "127.0.0.1"
 PORT = 5000
 
-with sck.socket(sck.AF_INET, sck.SOCK_STREAM) as client:
-    client.connect((IP, PORT))
+with sck.socket(sck.AF_INET, sck.SOCK_STREAM) as server:
+    server.bind((IP, PORT))
 
-    client.sendall(messaggio.encode())
+    server.listen(5)    #quante richieste puo avere in coda.
 
-    dati = client.recv(1024)
+    conn, addr = server.accept()     #restituisce una tupla da due elementi
 
-    print("Messaggio ricevuto dal server", dati.decode())
+    with conn:
+        print("Socket di ascolto: ", server.getsockname())
+        print("Socket di connessione: ", conn.getsockname())
+
+        dati = server.recv(1024)
+        print("Dati ricevuti dal client", dati.decode())
+        conn.sendall(dati)
