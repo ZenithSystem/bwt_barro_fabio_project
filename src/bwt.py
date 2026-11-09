@@ -1,5 +1,6 @@
 #Author: Barro Fabio 5BT-i
 
+
 #funzione codifica della stringa con bwt
 def encode_bwt(testo):
     
