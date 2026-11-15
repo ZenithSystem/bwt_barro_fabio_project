@@ -31,12 +31,12 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
         # Riceve fino a 1024 byte dal client.
         # decode() converte i byte ricevuti in una stringa.
         dati = conn.recv(1024)
-        messagio = dati.decode()
-        print("Messaggio ricevuto:", messagio)
+        messaggio = dati.decode()
+        print("Messaggio ricevuto:", messaggio)
 
         #applicchiamo la trsformata alla stringa.
-        messagio_bwt = encode_bwt(messagio)
-        print("Risposta BWT inviata: ", messagio_bwt)
+        messaggio_bwt = encode_bwt(messaggio)
+        print("Risposta BWT inviata: ", messaggio_bwt)
 
 
 
