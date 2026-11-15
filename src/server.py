@@ -5,7 +5,7 @@ import socket
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
 
     # Associa il socket all'indirizzo IP locale e alla porta 5000.
-    server.bind(("127.0.0.1", 5000))
+    server.bind(("127.0.0.1", 6000))
 
     # Mette il socket in ascolto di richieste di connessione.
     server.listen()
