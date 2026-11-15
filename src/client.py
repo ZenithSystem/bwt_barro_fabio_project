@@ -6,11 +6,11 @@ import socket
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
 
     # Richiede una connessione al server all'indirizzo e porta indicati.
-    client.connect(("127.0.0.1", 5000))
+    client.connect(("127.0.0.1", 6000))
 
     # Legge un messaggio da tastiera.
     # encode() converte la stringa in byte per poterla inviare.
-    messaggio = input("Inserisci un messaggio: ")
+    messaggio = input("Inserisci la stringa da trasformare con bwt")
     client.sendall(messaggio.encode())
 
     # Riceve fino a 1024 byte dal server.
