@@ -17,3 +17,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
     # decode() riconverte i byte in una stringa leggibile.
     risposta = client.recv(1024)
     print("Risposta del server:", risposta.decode())
+
+    
